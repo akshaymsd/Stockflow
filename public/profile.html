@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: "Segoe UI", system-ui, sans-serif; color: #0F1B17; background: #F6F7F5; line-height: 1.6; }
+    a { color: inherit; }
+
+    header nav { background: #0E1B17; padding: 16px 24px; display: flex; gap: 22px; }
+    header nav a { color: #C9D8D1; text-decoration: none; font-weight: 600; }
+    header nav a:hover { color: #B8F04A; }
+
+    .hero { background: #0E1B17; color: #fff; padding: 80px 24px; display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+    .hero-content { max-width: 560px; }
+    .hero .tag { color: #B8F04A; font-weight: 700; margin-bottom: 12px; }
+    .hero h1 { font-size: 3rem; line-height: 1.1; margin-bottom: 14px; }
+    .hero h2 { font-size: 1.3rem; font-weight: 500; color: #C9D8D1; margin-bottom: 16px; }
+    .hero p { color: #B9CBC3; margin-bottom: 26px; }
+
+    .button { display: inline-block; background: #B8F04A; color: #0E1B17; padding: 12px 24px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+
+    .photo { width: 280px; height: 340px; object-fit: cover; border-radius: 24px; border: 2px solid rgba(184,240,74,.4); }
+    section:not(.hero) { max-width: 1000px; margin: 0 auto; padding: 64px 24px; }
+    section h2 { font-size: 2rem; margin-bottom: 14px; }
+
+    /* About */
+    #about p { margin-bottom: 12px; color: #4B5B55; max-width: 720px; }
+    #about ul { list-style: none; margin-top: 18px; display: grid; gap: 10px; }
+    #about li { background: #fff; border: 1px solid #E3E8E5; border-radius: 12px; padding: 14px 18px; }
+
+    /* Skills */
+    #skills { background: #fff; max-width: none; }
+    #skills > section, #skills { padding-left: 24px; padding-right: 24px; }
+    #skills h3 { margin: 24px 0 10px; font-size: 1.05rem; color: #7FB81E; text-transform: uppercase; letter-spacing: .05em; }
+    #skills ul { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; }
+    #skills li { background: #EEF4E3; color: #3E6B0C; padding: 6px 14px; border-radius: 999px; font-weight: 600; font-size: .9rem; }
+
+    /* Projects: grid of cards */
+    #projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    #projects h2 { grid-column: 1 / -1; }
+    #projects article { background: #fff; border: 1px solid #E3E8E5; border-radius: 18px; padding: 24px; transition: transform .2s, box-shadow .2s; }
+    #projects article:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(14,27,23,.08); }
+    #projects h3 { font-size: 1.2rem; margin-bottom: 10px; }
+    #projects article p { color: #4B5B55; margin-bottom: 12px; }
+    #projects article p:last-of-type { font-size: .9rem; color: #7FB81E; font-weight: 600; }
+    #projects a { color: #0E1B17; font-weight: 700; text-decoration: none; }
+    #projects a:hover { color: #7FB81E; }
+
+    /* Contact */
+    #contact { background: #0E1B17; color: #fff; text-align: center; max-width: none; border-radius: 0; }
+    #contact h2 { color: #fff; }
+    #contact p { color: #B9CBC3; margin-bottom: 12px; }
+    #contact a { color: #B8F04A; font-weight: 700; }
+
+    /* Footer */
+    footer { text-align: center; color: #5C6E67; padding: 28px 24px 40px; font-size: .9rem; }
+
+    /* Phone */
+    @media (max-width: 760px) {
+      .hero { flex-direction: column-reverse; text-align: center; }
+      .hero h1 { font-size: 2.2rem; }
+      .photo { width: 220px; height: 260px; }
+      header nav { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akshay Santhosh</title>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <p>Open to work · Dubai, UAE</p>
+        <h1>Hi, I'm Akshay Santhosh</h1>
+        <h2>Software developer. I build web apps and IT systems.</h2>
+        <p>MCA graduate. Node.js, Express, MySQL, JavaScript. Looking for my first full-time role.</p>
+        <a href="#projects" class="button">See my projects</a>
+      </div>
+      <img src="photo.jpg" alt="Akshay Santhosh" class="photo">
+    </section>
+    <section id="about">
+      <h2>About me</h2>
+      <p>I learn best by building things. My projects are full systems: products and stock, login with admin roles, database transactions, and dashboards with real data.</p>
+      <p>I also have hands-on IT support experience, so I can work on both the software side and the day-to-day technical side of a business.</p>
+      <ul>
+        <li>Education: MCA (Master of Computer Applications)</li>
+        <li>Location: Dubai, United Arab Emirates</li>
+        <li>Looking for: Junior Developer / IT Support roles</li>
+      </ul>
+    </section>
+        <section id="skills">
+      <h2>Skills</h2>
+
+      <h3>Frontend</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Flutter</li>
+      </ul>
+
+      <h3>Backend and database</h3>
+      <ul>
+        <li>Node.js</li>
+        <li>Express</li>
+        <li>REST APIs</li>
+        <li>MySQL</li>
+        <li>MongoDB</li>
+      </ul>
+
+      <h3>Security and tools</h3>
+      <ul>
+        <li>JWT login</li>
+        <li>bcrypt</li>
+        <li>Git and GitHub</li>
+        <li>Postman</li>
+      </ul>
+
+      <h3>IT support</h3>
+      <ul>
+        <li>Troubleshooting</li>
+        <li>Windows</li>
+        <li>Networking basics</li>
+      </ul>
+    </section>
+        <section id="projects">
+      <h2>Projects</h2>
+
+      <article>
+        <h3>StockFlow: Mini ERP</h3>
+        <p>Inventory and sales system with products, suppliers, customers, purchases and sales. Stock updates use database transactions, and an admin login protects changes.</p>
+        <p>Tech: Node.js, Express, MySQL, JWT</p>
+        <a href="https://github.com/akshaymsd/Stockflow" target="_blank">View on GitHub</a>
+      </article>
+
+      <article>
+        <h3>Mood Brew: Coffee Shop Ordering</h3>
+        <p>Coffee shop website with menu, cart and online ordering. Prices come from the database, and the admin can manage orders and menu items.</p>
+        <p>Tech: Node.js, Express, MySQL, HTML, CSS, JavaScript</p>
+      </article>
+
+      <article>
+        <h3>Contacts Manager</h3>
+        <p>Contact app with Create, Read, Update and Delete, built to learn REST APIs with a MySQL database.</p>
+        <p>Tech: Node.js, Express, MySQL, Postman</p>
+      </article>
+
+      <article>
+        <h3>Eventify</h3>
+        <p>Event decoration management app with admin, user and staff roles. Flutter front end with a Node.js backend.</p>
+        <p>Tech: Flutter, Node.js, Express</p>
+      </article>
+
+      <article>
+        <h3>News App</h3>
+        <p>Flutter app that shows live headlines from NewsAPI, grouped by category.</p>
+        <p>Tech: Flutter, REST API</p>
+      </article>
+    </section>
+
+        <section id="contact">
+      <h2>Contact</h2>
+      <p>I'm open to junior developer and IT support roles in Dubai. Send me a message, or check my GitHub for code.</p>
+      <p><a href="mailto:akshaysanthosh001@gmail.com">akshaysanthosh001@gmail.com</a></p>
+      <p><a href="https://github.com/akshaymsd" target="_blank">GitHub: github.com/akshaymsd</a></p>
+    </section>
+
+    <footer>
+      <p>© 2026 Akshay Santhosh · Dubai, UAE</p>
+    </footer>
+  </main>
+</body>
+</html>
